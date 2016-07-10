@@ -1,0 +1,16 @@
+<Level No="3" Width="16" Height="14">
+<Row>   ##########</Row>
+<Row>   #..  #   #</Row>
+<Row>   #..      #</Row>
+<Row>   #..  #  ####</Row>
+<Row>  #######  #  ##</Row>
+<Row>  #            #</Row>
+<Row>  #  #  ##  #  #</Row>
+<Row>#### ##  #### ##</Row>
+<Row>#  $  ##### #  #</Row>
+<Row># # $  $  # $  #</Row>
+<Row># @$  $   #   ##</Row>
+<Row>#### ## #######</Row>
+<Row>   #    #</Row>
+<Row>   ######</Row>
+</Level>
