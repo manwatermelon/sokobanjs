@@ -57,7 +57,7 @@ function Game() {
                     $('#canvas').trigger(e);
                 },
                 tap: function(event, target) {
-                    
+                    //obligatory to make double tap work
                 },
                 doubleTap: function(event, target) {
                     var e = jQuery.Event("keydown");
@@ -69,6 +69,7 @@ function Game() {
                     e.which = 32;
                     $('#canvas').trigger(e);
                 },
+                //threshold to listen to double tap. ms, more - the bigger delay is allowed
                 doubleTapThreshold:250
             });
             
