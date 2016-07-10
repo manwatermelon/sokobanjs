@@ -35,12 +35,12 @@ function ImageRepository() {
         this.BoxOnGoal.src = "";
         this.Floor.src = "";
 
-        this.Wall.src = "~/../../Sokoban/Content/Images/wall.gif";
-        this.Box.src = "~/../../Sokoban/Content/Images/box.gif";
-        this.Goal.src = "~/../../Sokoban/Content/Images/goal.gif";
-        this.Player.src = "~/../../Sokoban/Content/Images/player.gif";
-        this.BoxOnGoal.src = "~/../../Sokoban/Content/Images/boxOnGoal.gif";
-        this.Floor.src = "~/../../Sokoban/Content/Images/floor.gif";
+        this.Wall.src = "../../Content/Images/wall.gif";
+        this.Box.src = "../../Content/Images/box.gif";
+        this.Goal.src = "../../Content/Images/goal.gif";
+        this.Player.src = "../../Content/Images/player.gif";
+        this.BoxOnGoal.src = "../../Content/Images/boxOnGoal.gif";
+        this.Floor.src = "../../Content/Images/floor.gif";
 
     }
 
@@ -116,8 +116,7 @@ function Player(map) {
 
 
     this.KeyCheck = function(event) {
-        var KeyID = event.keyCode;
-
+        var KeyID = event.keyCode || event.which;
         switch (KeyID) {
             case 87: // W
                 this.Move(this.MoveDirection.Up);

@@ -16,7 +16,9 @@ function Map(imgRepository) {
     this.Loaded = false;
 
     this.GetPlayer = function () { 
-        return this._map[this._playerX][this._playerY];
+        if (this._map != null && typeof this._map != "undefined") {
+            return this._map[this._playerX][this._playerY];
+        }
     }
 
     this.LoadMap = function (levelNumber) {
@@ -31,7 +33,7 @@ function Map(imgRepository) {
         this.Loaded = false;
         $.ajax({
             type: "GET",
-            url: "~/../../Sokoban/Level/" + levelNumber + ".xml",
+            url: "~/../../Level/" + levelNumber + ".xml",
             dataType: "xml",
             success: this.ParseXmlMap,
             context: this
@@ -43,6 +45,13 @@ function Map(imgRepository) {
         if (this._goals > 0 && this._goalsAchived == this._goals) {
             this.Finished = true;
         }
+        if (this._map != null && typeof this._map != "undefined") {
+            _levelStatistics.Update();
+        }
+    }
+
+    this.FinishCurrentLevel = function () {
+        this.Finished = true;
         _levelStatistics.Update();
     }
 
